@@ -156,8 +156,12 @@ namespace ReferenceViewer
 			return true;
 		}
 
+#if false
 		[MenuItem("Assets/Find References In Project", false, 25)]
 		[MenuItem("Assets/Find References In Project/By FindStr", false, 25)]
+#else
+		[MenuItem("Assets/文字列ベースの参照検索", false, 95)]
+#endif
 		public static void FindReferencesByFindStr()
 		{
 			if (!LoadSettings())
@@ -174,8 +178,9 @@ namespace ReferenceViewer
 
 #endregion
 
+#if false
 #region Win/GitGrep
-		
+
 		[MenuItem("Assets/Find References In Project/By GitGrep", true)]
 		static bool IsEnabledByGitGrep()
 		{
@@ -217,6 +222,7 @@ namespace ReferenceViewer
 		}
 
 #endregion
+#endif
 
 #endif
 	}

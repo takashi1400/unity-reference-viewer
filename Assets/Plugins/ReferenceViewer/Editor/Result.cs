@@ -69,7 +69,7 @@ namespace ReferenceViewer
 		internal static readonly CommandInfo OSXSpotlit = new CommandInfo("mdfind", "-onlyin '{0}' -0 {1}", Null);
 		internal static readonly CommandInfo OSXGrep = new CommandInfo("grep", "{1} -rl --null '{0}'", Null);
 		internal static readonly CommandInfo OSXGit = new CommandInfo("git", "-C '{0}' grep -z -l {1}", Null);
-		internal static readonly CommandInfo WinFindstr = new CommandInfo("findstr.exe", "/M /S {1} *", Environment.NewLine);
+		internal static readonly CommandInfo WinFindstr = new CommandInfo("findstr.exe", "/M /S {1} {0}/*", Environment.NewLine);
 		internal static readonly CommandInfo WinGit = new CommandInfo("git.exe", "-C \"{0}\" grep -z -l {1}", Null);
 	}
 
